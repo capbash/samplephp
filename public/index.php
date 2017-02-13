@@ -1,8 +1,15 @@
 <?php
 require_once('_config.php');
 
+
 $GLOBALS["viewables"]["head_title"] = "Homepage";
 $GLOBALS["viewables"]["route"] = "homepage";
-$GLOBALS["viewables"]["h1"] = "Hello World";
 
+if (isset($_POST["myName"])) {
+    $name = $_POST["myName"];
+} else {
+    $name = null;
+}
+
+$GLOBALS["viewables"]["h1"] = \Samplephp\Message::hello($name);
 require_view('layout/layout');
