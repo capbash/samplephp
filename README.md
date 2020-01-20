@@ -1,5 +1,4 @@
 samplephp
 =========
 
-A do nothing PHP site to show that you properly configured a PHP site
-Updated by Alaa
+After My Updates Jan 19th 2020
