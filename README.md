@@ -1,4 +1,4 @@
-samplephp
+README.md
 =========
 
-This README has been modified by Sam Daly
+Updated this file once again
