@@ -1,4 +1,8 @@
-samplephp
-=========
+# samplephp
 
-A do nothing PHP site to show that you properly configured a PHP site
+This is a repository for a PHP website that shows that you have properly configured a PHP website. It contains the following folders:
+
+* app
+* bin
+* public 
+* tests
