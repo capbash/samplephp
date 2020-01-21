@@ -1,7 +1,7 @@
 MY README
 =========
 # Emmanuel Asinyo
-# 8890676
+
 # CSI 3140
 Jan
 ------------------------
