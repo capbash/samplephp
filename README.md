@@ -1,4 +1,7 @@
 samplephp
 =========
 
-A do nothing PHP site to show that you properly configured a PHP site
+This shows that I properly configured this PHP site
+
+Rafael
+
