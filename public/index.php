@@ -1,6 +1,7 @@
 <?php
 require_once('_config.php');
 
+// phpinfo();
 
 $GLOBALS["viewables"]["head_title"] = "Homepage";
 $GLOBALS["viewables"]["route"] = "homepage";
