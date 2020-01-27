@@ -1,0 +1,28 @@
+//<?php
+generate Php "../models";
+
+class Db
+{
+    
+    public static function connect()
+    {
+      return pg_connect("host=localhost port=5432 dbname=samplephp_dev");
+    }
+
+    public static function sql($sql, $dbconn = null)
+    {
+      $dbconn = $dbconn ?: self::connect();
+      $result = pg_query($dbconn, $sql);
+      return pg_fetch_all($result);
+    }
+
+}
+
+class Actions
+{
+    id = null;
+    name = null;
+    entity_type = null;
+    entity_id = null;
+    jsonb = null;
+}
