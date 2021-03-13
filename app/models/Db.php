@@ -30,7 +30,7 @@ class Db
 
    public static  function connect()
   {
-    return pg_connect("host=localhost port=5432 dbname=samplephp_dev");
+    return pg_connect("host=localhost port=5432 dbname=samplephp");
   }
 
   //------------------------
@@ -42,7 +42,7 @@ class Db
   {
     $dbconn = $dbconn ?: self::connect();
       $result = pg_query($dbconn, $sql);
-      return pg_fetch_all($result);
+      return pg_fetch_all($result, PGSQL_ASSOC);
   }
 
 }
