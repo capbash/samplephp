@@ -1,5 +1,5 @@
 <?php
-   
+
 $GLOBALS["appDir"] = resolve_path("app");
 $GLOBALS["viewables"] = array();
 
@@ -19,7 +19,7 @@ function resolve_path($name)
     {
         return "../{$name}";
     }
-    
+
     return file_exists($publicRoot) ? realpath($publicRoot) : realpath($appRoot);
 }
 
