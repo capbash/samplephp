@@ -1,7 +1,6 @@
 <?php
 
-function __autoload($fullName)
-{
+spl_autoload_register(function ($fullName) {
     $parts = explode("\\", $fullName);
     $len = count($parts);
     $className = $parts[$len - 1];
@@ -9,4 +8,4 @@ function __autoload($fullName)
     {
       require_once "app/models/{$className}.php";
     }
-}
+});

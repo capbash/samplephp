@@ -23,8 +23,7 @@ function resolve_path($name)
     return file_exists($publicRoot) ? realpath($publicRoot) : realpath($appRoot);
 }
 
-function __autoload($fullName)
-{
+spl_autoload_register(function ($fullName) {
     $parts = explode("\\", $fullName);
     $len = count($parts);
     $className = $parts[$len - 1];
@@ -32,7 +31,7 @@ function __autoload($fullName)
     {
       require_once $GLOBALS["appDir"] . "/models/{$className}.php";
     }
-}
+});
 
 function l($lookup,$default = "")
 {
