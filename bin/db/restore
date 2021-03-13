@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DB=samplephp
+NAME=${NAME-samplephp_latest}
+
+# Our DB is small, keep it as SQL
+psql -c "DROP DATABASE $DB" || true
+psql -c "CREATE DATABASE $DB"
+psql $DB < ./db/backups/${NAME}.sql
+
+# But, if it gets big, then pipe it into a gzip file
+# gunzip -c ./db/backups/${NAME}.gz | psql $DB

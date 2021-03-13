@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DB=samplephp
+
+psql -c "DROP DATABASE $DB" || true
+psql -c "CREATE DATABASE $DB"
+psql $DB < ./db/schema.sql
+psql $DB < ./db/seed.sql

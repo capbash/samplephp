@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DB=samplephp
+NAME=${NAME-samplephp_latest}
+
+# Our DB is small, keep it as SQL
+pg_dump $DB > ./db/backups/${NAME}.sql
+
+# But, if it gets big, then pipe it into a gzip file
+# pg_dump $DB | gzip > ./db/backups/${NAME}.gz
